@@ -137,7 +137,7 @@ async def daily_rank():
     now = datetime.datetime.now()
 
     if now.minute == 0 and now.hour in [0, 12]:
-        channel = bot.get_channel(TOKEN)
+        channel = bot.get_channel(1489447355517501598)
 
         if not study_totals:
             await channel.send("오늘 기록 없음")
@@ -154,4 +154,4 @@ async def daily_rank():
 
         await channel.send(msg)
 
-bot.run("TOKEN")
+bot.run(os.getenv("TOKEN"))
